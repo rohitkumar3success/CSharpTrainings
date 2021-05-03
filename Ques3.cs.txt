@@ -1,0 +1,34 @@
+using System;
+class Program
+{
+    public static void Main()
+    {
+        string StudentName;
+        string UniversityName;
+        int Rollno;
+        int Age;
+        int Class;
+
+        Console.WriteLine("Please Enter your name");
+        StudentName = Console.ReadLine();
+
+        Console.WriteLine("Please Enter your University Name");
+        UniversityName = Console.ReadLine();
+
+        Console.WriteLine("Please Enter your Roll no:");
+        Rollno = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Please enter your Age");
+        Age = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Please Enter your class:");
+        Class = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("\nYour Complete Student's INFO");
+        Console.WriteLine("Name     = {0}", StudentName);
+        Console.WriteLine("City     = {0}", UniversityName);
+        Console.WriteLine("Roll no      = {0}",Rollno);
+        Console.WriteLine("Age = {0}", Age);
+        Console.WriteLine("Class= {0}", Class);
+    }
+}
