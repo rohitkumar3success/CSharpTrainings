@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+       Console.Write("Input money : ");
+       double money = double.Parse(Console.ReadLine());
+       double tax;
+       if (money < 10000)
+       {
+           tax = .05 * money;
+       }
+       else if (money <= 100000)
+       {
+           tax = .08 * money;
+       }
+       else
+       {
+           tax = .085 * money;
+       }
+
+       Console.WriteLine("Tax is {0:C}", tax);
+       Console.ReadKey();
+    }
+}
+
