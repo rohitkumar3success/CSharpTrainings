@@ -1,34 +1,30 @@
 using System;
 class Program
 {
-    public static void Main()
-    {
-        string StudentName;
-        string UniversityName;
-        int Rollno;
-        int Age;
-        int Class;
+ 
+ public static void Main()
+	{
+    int Num,pwr;
+    int res;
+    Console.Write("\nCalculate power of any number :\n");
+	Console.Write("-------\n");	
+     
+    Console.Write(" giving value : ");
+    bNum = Convert.ToInt32(Console.ReadLine());
+     
+    Console.Write(" giving the exponent : ");
+    pwr = Convert.ToInt32(Console.ReadLine());
+     
+    result=Calculating(Num,pwr);
+     
+    Console.Write(" The value of {0} to the power of {1} is : {2} \n\n",bNum,pwr,res);
+	}
 
-        Console.WriteLine("Please Enter your name");
-        StudentName = Console.ReadLine();
-
-        Console.WriteLine("Please Enter your University Name");
-        UniversityName = Console.ReadLine();
-
-        Console.WriteLine("Please Enter your Roll no:");
-        Rollno = int.Parse(Console.ReadLine());
-
-        Console.WriteLine("Please enter your Age");
-        Age = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("Please Enter your class:");
-        Class = int.Parse(Console.ReadLine());
-
-        Console.WriteLine("\nYour Complete Student's INFO");
-        Console.WriteLine("Name     = {0}", StudentName);
-        Console.WriteLine("City     = {0}", UniversityName);
-        Console.WriteLine("Roll no      = {0}",Rollno);
-        Console.WriteLine("Age = {0}", Age);
-        Console.WriteLine("Class= {0}", Class);
-    }
+public static int Calculating( int x,int y)
+ {
+  if (y == 0)
+   return 1;
+  else
+   return x * Calculating( x, y - 1 );
+ }
 }
