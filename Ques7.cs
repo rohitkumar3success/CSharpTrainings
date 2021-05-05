@@ -1,84 +1,33 @@
 using System;
 
-namespace Qsev
+namespace Ques7//Question 7 for calculating power
 {
     class Program
     {
         static void Main(string[] args)
-        { 
-            int bnum, exp,pow, i;
-            string res;
-            Console.Write("Enter any basenumber: ");
-            bnum = Convert.ToInt32(Console.ReadLine());
- 
-            Console.Write("Enter exponent: ");
-            exp = Convert.ToInt32(Console.ReadLine());
- 
-            pow = 1;
-            i = 1;
-            while (i <= exp)
-            {
-                pow= pow * bnum;
-                i++;
-            }
-            
-            Console.WriteLine("Power : "+ pow);   
-            Console.WriteLine("Do you want to continue?");
-            res = Console.ReadLine();
-            while(true)
-            {
-            if(res == "y" || res == "Y")
-            {
-                continue;
-            }
-            else
-            {
-                Console.WriteLine("Exit");
-            } 
-            }
-            
-        }
-    }
+        {
+        result:
+            Console.WriteLine("Enter no:");// Enter the number as per required
+            int numb = Convert.ToInt32(Console.ReadLine());//conversion using ToInt32
 
-namespace Qsev
-{
-    class Program
-    {
-        static void Main(string[] args)
-        { 
-            int bnum, exp,pow, i;
-            string res;
-            Console.Write("Enter any basenumber: ");
-            bnum = Convert.ToInt32(Console.ReadLine());
- 
-            Console.Write("Enter any exponent: ");
-            exp = Convert.ToInt32(Console.ReadLine());
- 
-            pow = 1;
-            i = 1;
-            while (i <= exp)
-            {
-                pow = pow * bnum;
-                i++;
-            }
-            
-            Console.WriteLine("Power : "+ pow);   
-            Console.WriteLine("Do you want to continue?");
-            res = Console.ReadLine();
-            while(true)
-            {
-            if(res == "y" || res == "Y")
-            {
-                continue;
-            }
-            else
-            {
-                Console.WriteLine("Quit");
-            } 
-            }
-            
-        }
-    }
 
-}
+            int pow = 1;//declaring pow variable 
+            int n = numb;//to take number as input
+            while (n > 0)
+            {
+                pow *= numb;//storing value for pow
+                n--;
+            }
+            Console.WriteLine("power of {0} calculated to power {1} is: {2}", numb, numb, pow);
+
+            Console.WriteLine("Enter Y to continue else press any key for exit");
+            string choice = Console.ReadLine();
+
+            if (choice == "y" || choice == "Y")//condition to continue or not
+            {
+                goto result;
+            }
+        }
+
+    }
 }
