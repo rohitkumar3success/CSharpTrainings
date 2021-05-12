@@ -11,7 +11,7 @@ namespace Emp_Sal_Successive
         private double balance = 12000;//salary by default given as per month
 
 
-        public double sal
+        public double salary
         {
             get { return balance; }//get method returns the value of the variable balance
             set { balance = value; }//set method assigns a value to the variable balance
@@ -22,7 +22,7 @@ namespace Emp_Sal_Successive
         empsalary i = new empsalary(); //object created for employee salary
         string name;  //name of the employee
         int account; // account no
-        double penalty, dep, total; 
+        double penalty, depositsalary, total; 
 
         public void fun1() 
         {
@@ -31,8 +31,8 @@ namespace Emp_Sal_Successive
             Console.WriteLine("Enter Account Number  :");
             account = Convert.ToInt32(Console.ReadLine());//convert a specified value to a 32-bit signed integer
             Console.WriteLine("Enter salary Amount :");
-            dep = Convert.ToDouble(Console.ReadLine());
-            total = i.sal + dep;
+            depositsalary = Convert.ToDouble(Console.ReadLine());
+            total = i.salary + depositsalary;
 
             Console.WriteLine("------------------------------\n");
             Console.WriteLine("Name of the Employee : " + name);
@@ -51,9 +51,9 @@ namespace Emp_Sal_Successive
 
             Console.WriteLine("Enter Penalty Amount :");
             penalty = Convert.ToDouble(Console.ReadLine());
-            if (penalty <= i.sal)
+            if (penalty <= i.salary)
             {
-                total = i.sal - penalty;
+                total = i.salary - penalty;
                 Console.WriteLine("------------------------------\n");
                 Console.WriteLine("Employee Name : " + name);
                 Console.WriteLine("Account Number: " + account);
